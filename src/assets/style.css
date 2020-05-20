@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+button{
+    cursor: pointer;
+       border-style: none;
+       padding: .4em 1.3em;
+    letter-spacing: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 21px;
+    background-color: #00CBFF;
+    color: white;
+
+   }
+
+   button:focus{
+    background-color:white ;
+    outline: none;
+    color: #00CBFF;
+
+   }
+
+input[type=text]{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    background: transparent;
+}
+input[type=email]{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    background: transparent;
+}
+input[type=password]{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+    background: transparent;
+}
+input[type=text]:focus { 
+    outline: none;
+
+ }
+ input[type=email]:focus { 
+    outline: none;
+
+ }
+ input[type=password]:focus { 
+    outline: none;
+
+ }
+ /* input[type=text]::selection{
+     background:transparent;
+     background-color: #fff;
+ }
+ input[type=text]::-moz-selection{
+     background:transparent;
+     background-color: #fff;
+ } */
+ input:-internal-autofill-selected {
+    -webkit-appearance: menulist-button;
+    background-color: rgba(232, 240, 254,0) !important;
+    /* background-image: none !important; */
+    color: -internal-light-dark-color(black, white) !important;
+}
+
+input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+    font-size: 20px;
+}
+input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+    font-size: 20px;
+}
+
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+    font-size: 20px;
+}
+input[type=email]::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+    font-size: 20px;
+}
+input[type=email]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+    font-size: 20px;
+}
+
+input[type=email]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+    font-size: 20px;
+}
+input[type=password]::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+    font-size: 20px;
+}
+input[type=password]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+    font-size: 20px;
+}
+
+input[type=password]:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+    font-size: 20px;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*  text-align: center; */
+    color: white;
+    min-height: 100vh;
+  }
+#app,.appbar::before,.card::before,.loginbox::before,.writeboard::before{
+   
+    background: url(mmexport1513234593836.jpg)  0 / cover fixed;
+}
+
+/* login and signin form style */
+#app .loginbox {
+    width: 420px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    top: 80px;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 3;
+    padding: 2em;
+    padding-bottom: 4em;
+  }
+  
+  #app .loginbox .loginput {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #app .loginbox .loginput .inputstyle {
+    position: relative;
+    margin-bottom: .5em;
+    height: 42px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 42px;
+    background-color: rgba(255, 255, 255, 0.39);
+    border-radius: 21px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  
+  #app .loginbox .loginput .inputstyle .code {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    color: #49a390;
+    font-size: 20px;
+    padding-left: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0 21px 21px 0;
+  }
+  
+  #app .loginbox .loginput .inputstyle input {
+    z-index: 1;
+  }
+  
+  #app .loginbox .loginput .inputstyle svg {
+    margin-left: 12px;
+    margin-top: 4px;
+    margin-right: 4px;
+    width: 35px;
+    height: 35px;
+    fill: #49a390;
+  }
+  
+  #app .loginbox .loginput .checkboxf {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    /*设置选中的input的样式*/
+    /* + 是兄弟选择器,获取选中后的label元素*/
+  }
+  
+  #app .loginbox .loginput .checkboxf input[type=checkbox] {
+    visibility: hidden;
+  }
+  
+  #app .loginbox .loginput .checkboxf span {
+    margin-left: 1em;
+    position: relative;
+    z-index: 1;
+  }
+
+  #app .loginbox .loginput .checkboxf span a{
+      color:#00CBFF
+  }
+  
+  #app .loginbox .loginput .checkboxf label {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+            user-select: none;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #00CBFF;
+  }
+  
+  #app .loginbox .loginput .checkboxf input:checked + label {
+    background-color: #00CBFF;
+    /* border: 1px solid #fe6d32; */
+  }
+  
+  #app .loginbox .loginput .checkboxf input:checked + label::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    top: 3px;
+    left: 6px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  #app .loginbox .loginput .btn {
+    width: 100%;
+    margin-top: 1em;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  #app .loginbox .loginput .btn button {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #app .loginbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-filter: blur(15px);
+            filter: blur(15px);
+    margin: -25px;
+  }
+  
+  #app .loginbox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(201, 243, 235, 0.3);
+  }
+
+
+  

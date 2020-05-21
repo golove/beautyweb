@@ -36,7 +36,8 @@ export default class Actiontool extends Vue {}
 
 <style lang="scss">
 .actiontool {
-  width: 220px;
+  width: 200px;
+  z-index: 1;
   position: absolute;
   bottom: 1em;
   right: 3em;
@@ -46,6 +47,8 @@ export default class Actiontool extends Vue {}
   opacity: 0.7;
   .icon {
     position: relative;
+    cursor: pointer;
+    z-index: 1;
     svg {
       width: 25px;
       height: 25px;

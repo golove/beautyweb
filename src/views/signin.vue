@@ -37,8 +37,8 @@
         </span>
       </span>
       <div class="btn">
+        <router-link tag="button" to="/login">已有賬號?登錄</router-link>
         <button>注冊</button>
-        <button>登錄</button>
       </div>
     </div>
   </div>

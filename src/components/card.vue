@@ -16,32 +16,46 @@
       </div>
     </div>
     <article>
-      <h2>lorem sets assets what's</h2>
-      <p class="time">2020/10/23 10:33AM</p>
-      <p>
-        Do yourself a favor and start browsing Medium for high quality articles
-        on just about ANY topic. Get those mental gears turning!
-      </p>
+      <h2>{{ headerBlocks[0].data.text }}</h2>
+      <p class="time">{{ item.createTime }}</p>
+      <p>{{ paragraphBlocks[0].data.text }}</p>
     </article>
     <div class="userinfo">
       <div class="avatar">
-        <img
-          src="http://yanxuan.nosdn.127.net/a7ad9f5942a1c0c46fe4ed5f7ad9d720.jpg"
-          alt
-        />
+        <img :src="item.author.avatar" alt />
       </div>
-      <h3>紫雲英</h3>
+      <h3>{{ item.author.name }}</h3>
     </div>
     <actiontools />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+// 2020/10/23 10:33AM
+import { Component, Vue, Prop } from "vue-property-decorator";
 import actiontools from "./actiontools.vue";
+import ArticleData from "../model/ArticleData";
 @Component({ components: { actiontools } })
 export default class Card extends Vue {
+  @Prop() item!: ArticleData;
   menuflag = false;
+  headerBlocks: Array<any> = [];
+  imageBlocks: Array<any> = [];
+  paragraphBlocks: Array<any> = [];
+  filterData() {
+    for (const e of this.item.content.blocks) {
+      if (e.type === "header") {
+        this.headerBlocks.push(e);
+      } else if (e.type === "image") {
+        this.imageBlocks.push(e);
+      } else if (e.type === "paragraph") {
+        this.paragraphBlocks.push(e);
+      }
+    }
+  }
+  mounted() {
+    this.filterData();
+  }
 }
 </script>
 
@@ -127,6 +141,7 @@ export default class Card extends Vue {
     }
   }
   .userinfo {
+    z-index: 1;
     position: absolute;
     bottom: 1em;
     display: inline-flex;

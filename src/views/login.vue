@@ -22,7 +22,7 @@
         <input type="text" placeholder="vertifycode" />
       </div>
       <div class="btn">
-        <button>注冊</button>
+        <router-link tag="button" to="/signin">沒有賬號?注冊</router-link>
         <button>登錄</button>
       </div>
     </div>
